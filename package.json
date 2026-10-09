@@ -1,0 +1,27 @@
+{
+  "name": "harness",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A small coding-agent harness, built to learn how Claude Code-style agents work inside.",
+  "bin": {
+    "harness": "src/cli.ts"
+  },
+  "scripts": {
+    "start": "node --experimental-strip-types --no-warnings src/cli.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "verify": "npm run typecheck && npm test"
+  },
+  "engines": {
+    "node": ">=22.6"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.133.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
